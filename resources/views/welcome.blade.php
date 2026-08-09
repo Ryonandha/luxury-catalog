@@ -60,7 +60,9 @@
                         <!-- Image -->
                         <div class="aspect-square bg-gray-900 relative overflow-hidden">
                             @if($product->image)
+                                <a href="{{ route('product.show', $product->slug) }}">
                                 <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                </a>
                             @else
                                 <div class="flex items-center justify-center w-full h-full text-gray-600">No Image</div>
                             @endif
@@ -77,7 +79,7 @@
                             </div>
                             <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-800">
                                 <span class="font-extrabold accent-color text-lg">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
-                                <button class="text-sm font-semibold hover:text-yellow-400 transition">Beli &rarr;</button>
+                                <a href="{{ route('product.show', $product->slug) }}" class="text-sm font-semibold hover:text-yellow-400 transition">Beli &rarr;</a>
                             </div>
                         </div>
                     </div>

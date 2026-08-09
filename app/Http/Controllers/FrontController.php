@@ -26,4 +26,14 @@ class FrontController extends Controller
 
         return view('welcome', compact('categories', 'products'));
     }
+    public function show(Product $product)
+    {
+        // Jika produk tidak tersedia, kembalikan pengunjung ke halaman utama
+        if (!$product->is_available) {
+            return redirect()->route('home');
+        }
+
+        // Tampilkan halaman detail produk
+        return view('product', compact('product'));
+    }
 }
