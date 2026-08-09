@@ -26,6 +26,10 @@ class FrontController extends Controller
 
         return view('welcome', compact('categories', 'products'));
     }
+    public function about()
+    {
+        return view('about');
+    }
     public function show(Product $product)
     {
         // Jika produk tidak tersedia, kembalikan pengunjung ke halaman utama

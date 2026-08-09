@@ -32,7 +32,10 @@
             <a href="{{ route('home') }}" class="text-2xl font-black tracking-tighter">
                 LUXURY<span class="accent-color">CATALOG</span>
             </a>
-            <a href="/admin" class="text-sm font-semibold text-gray-400 hover:text-yellow-400 transition">Admin Panel</a>
+            <div class="flex gap-6 items-center">
+                <a href="{{ route('about') }}" class="text-sm font-bold text-gray-400 hover:text-white transition">Tentang Kami</a>
+                <a href="/admin" class="text-sm font-bold bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:border-yellow-400 transition">Admin &rarr;</a>
+            </div>
         </div>
     </nav>
 
